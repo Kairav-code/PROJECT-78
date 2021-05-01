@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <title>C- 78 Project</title>
+    <h1>My Family Book</h1>
+    <h3>( Please Double - Click The Button )</h3>
+</head>
+<body>
+    <img src = "https://languageduringmealtime.com/wp-content/uploads/2014/11/The-family-book-e1417314391978.jpg" style= "width: 30%"  id="family_member_image">
+    <h4 id = "family_member_name"></h4>
+    <button ondblclick="update()">NEXT</button>
+    <script>
+        var images = [ "https://languageduringmealtime.com/wp-content/uploads/2014/11/The-family-book-e1417314391978.jpg", 
+        "http://www.simpleimageresizer.com/_uploads/photos/32e150dc/father_600x600.jpg", 
+        "http://www.simpleimageresizer.com/_uploads/photos/32e150dc/mother_600x600.jpg", 
+        "http://www.simpleimageresizer.com/_uploads/photos/32e150dc/gm_600x600.png", 
+        "http://www.simpleimageresizer.com/_uploads/photos/32e150dc/me_600x600.jpg",
+        "http://www.simpleimageresizer.com/_uploads/photos/32e150dc/sister_600x600.jpg" ];
+        var names = [ "My Family Book", "Rajeev Chowdhury (Father)", "Jayashree Chowdhury (Mother)", "Maya Chowdhury (Grand Mother)", "Kairav Chowdhury (Me) ", "Devishi Chowdhury (Sister)" ];
+
+        var i = 0 ;
+        function update() {
+            i++ ;
+            var number_of_family_member_in_array = 5;
+            if (i > number_of_family_member_in_array) {
+                i = 0;
+            }
+            var updatedImage = images[i]
+            var updatedName = names[i]
+            document.getElementById("family_member_image").src= updatedImage;
+            document.getElementById("family_member_name").innerHTML= updatedName;
+
+        }
+        </script>
+        <style>
+            body{
+                text-align: center;
+                background-color:aqua;
+            }
+            h1{
+                font-family: fantasy;
+            }
+            h4{
+                font-size: 30px;
+            }
+            button{
+                background-color: #4CAF50;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            h3{
+                font-family: fantasy;
+            }
+        </style>
+
+</body>
+</html>
